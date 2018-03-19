@@ -1,0 +1,315 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "img/1.jpg",
+      "fonts/mui.ttf",
+      "js/common.js",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js",
+      "js/mui.picker.js",
+      "css/mui.poppicker.css",
+      "css/mui.picker.css"
+    ],
+    "refer": [
+      "main.html",
+      "mpplan/mpplanList.html",
+      "mpplan/mpplanD.html"
+    ]
+  },
+  "main.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "home.html",
+      "html/home.html"
+    ],
+    "refer": [
+      "mpplanList.html",
+      "mpplan/mpplanList.html",
+      "mpplan/mpplanList2.html",
+      "mat/matinList.html",
+      "phone.html",
+      "home.html",
+      "work.html",
+      "html/work.html",
+      "html/test.html",
+      "html/home.html",
+      "html/phone.html"
+    ]
+  },
+  "mpplanList.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "mpplan/mpplanList.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "mpplan/mpplanD.html"
+    ]
+  },
+  "mpplan/mpplanD.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "mpplan/mpplanList2.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "mat/matinList.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "mat/matinD.html"
+    ]
+  },
+  "mat/matinD.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "home.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/work.html": {
+    "resources": [
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "html/test.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "html/phone.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "html/home/mpplan/mpplanList.html": {
+    "resources": [
+      "js/mui.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "html/home/mpplan/mpplanD.html"
+    ]
+  },
+  "html/home.html": {
+    "refer": [
+      "html/home/mpplan/mpplanList.html",
+      "html/home/mat/matinList.html",
+      "html/home/phb/phbList.html",
+      "html/home/msaleodd/msaleoddList.html",
+      "html/home/car/carList.html",
+      "html/home/mpplan/mpplan_main.html",
+      "html/home/phb/mphbProdList.html",
+      "html/home/car/carList_bak.html",
+      "html/home/mpplan/mpplan_main_01.html",
+      "html/home/mpact/mpactList.html",
+      "html/home/mpact/mpactList_vue.html"
+    ],
+    "resources": [
+      "img/ico11.png",
+      "img/1.jpg",
+      "css/iconfont.css",
+      "js/webviewGroup.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf",
+      "js/mytools.js",
+      "js/common.js",
+      "js/echarts.js"
+    ]
+  },
+  "html/home/mat/matinList.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "css/js/mui.min.js",
+      "css/fonts/mui.ttf",
+      "css/css/mui.min.css",
+      "css/mui.min.css",
+      "js/mytools.js",
+      "js/common.js"
+    ],
+    "refer": []
+  },
+  "html/home/msaleodd/msaleoddList.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/mytools.js",
+      "js/common.js"
+    ],
+    "refer": []
+  },
+  "html/home/car/carList.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/common.js"
+    ],
+    "refer": []
+  },
+  "html/home/mpplan/mpplan_main.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/webviewGroup.js",
+      "html/home/mpplan/mpplan_all.html",
+      "html/home/mpplan/mpplan_start.html",
+      "js/common.js"
+    ],
+    "refer": [
+      "html/home/mpplan/mpplan_all.html",
+      "html/home/mpplan/mpplan_start.html",
+      "html/home/mpplan/mpplan_wait.html",
+      "html/home/mpplan/mpplan_end.html"
+    ]
+  },
+  "html/home/mpplan/mpplan_all.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/mytools.js",
+      "js/common.js"
+    ],
+    "refer": []
+  },
+  "html/home/mpplan/mpplan_end.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "html/home/mpplan/mpplan_wait.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "js/mytools.js"
+    ],
+    "refer": []
+  },
+  "html/home/mpplan/mpplan_start.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "js/mytools.js"
+    ],
+    "refer": []
+  },
+  "html/home/phb/phbList.html": {
+    "resources": [
+      "fonts/mui.ttf"
+    ],
+    "refer": []
+  },
+  "html/home/phb/mphbProdList.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.css",
+      "fonts/mui.ttf",
+      "js/common.js"
+    ],
+    "refer": []
+  },
+  "html/home/car/carList_bak.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css"
+    ],
+    "refer": []
+  },
+  "index_1.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "js/mui.picker.min.js",
+      "js/mui.poppicker.js"
+    ],
+    "refer": [
+      "main.html"
+    ]
+  },
+  "html/home/mpplan/mpplan_main_01.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mytools.js"
+    ]
+  },
+  "html/home/mpact/mpactList.html": {
+    "resources": [
+      "css/mui.css",
+      "js/common.js",
+      "js/mytools.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "js/vue.min.js"
+    ],
+    "refer": [
+      "html/home/mpact/mpact_detail.html"
+    ]
+  },
+  "html/home/mpact/mpact_detail.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "fonts/mui.ttf",
+      "js/common.js"
+    ]
+  },
+  "html/home/mpact/mpactList_vue.html": {
+    "resources": [
+      "js/vue.min.js"
+    ]
+  }
+}

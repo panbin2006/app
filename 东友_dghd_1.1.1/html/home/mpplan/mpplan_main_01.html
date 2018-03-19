@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../../css/mui.min.css" rel="stylesheet" />
+		<script src="../../../js/mui.min.js"></script>
+		<script src="../../../js/mytools.js"></script>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">生产计划单</h1>
+		    <!--<h2 class="mui-title">鸿生站</h2>-->
+		</header>
+		
+		<div class="mui-content">
+		    <div class="mui-slider">
+				<!--选项卡标题区-->
+				<div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+				  <a class="mui-control-item" href="#item1">全部</a>
+				  <a class="mui-control-item" href="#item2">开工</a>
+				  <a class="mui-control-item" href="#item3">等待</a>
+				  <a class="mui-control-item" href="#item4">完工</a>
+				</div>
+				<div class="mui-slider-progress-bar mui-col-xs-3"></div>
+				<div class="mui-slider-group">
+				  <!--第一个选项卡内容区-->
+				  <div id="item1" class="mui-slider-item mui-control-content mui-active">
+				    <ul class="mui-table-view">
+				      <li class="mui-table-view-cell" id='btn'>待办公文1</li>
+				      <li class="mui-table-view-cell">待办公文2</li>
+				      <li class="mui-table-view-cell">待办公文3</li>
+				    </ul>
+				  </div>
+				  <!--第二个选项卡内容区，页面加载时为空-->
+				  <div id="item2" class="mui-slider-item mui-control-content">
+				  	<ul class="mui-table-view">
+				      <li class="mui-table-view-cell">待办公文1</li>
+				      <li class="mui-table-view-cell">待办公文2</li>
+				      <li class="mui-table-view-cell">待办公文3</li>
+				    </ul>
+				  </div>
+				  <!--第三个选项卡内容区，页面加载时为空-->
+				  <div id="item3" class="mui-slider-item mui-control-content">
+				  	<ul class="mui-table-view">
+				      <li class="mui-table-view-cell">待办公文1</li>
+				      <li class="mui-table-view-cell">待办公文2</li>
+				      <li class="mui-table-view-cell">待办公文3</li>
+				    </ul>
+				  </div>
+				  <!--第三个选项卡内容区，页面加载时为空-->
+				  <div id="item3" class="mui-slider-item mui-control-content">
+				  	<ul class="mui-table-view">
+				      <li class="mui-table-view-cell">待办公文1</li>
+				      <li class="mui-table-view-cell">待办公文2</li>
+				      <li class="mui-table-view-cell">待办公文3</li>
+				    </ul>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			mui.init();
+			var item2Show = false,item3Show = false,item3Show = false;//子选项卡是否显示标志
+//			var pdate='2017-06-08';
+			document.querySelector('.mui-slider').addEventListener('slide', function(event) {
+			  if (event.detail.slideNumber === 1&&!item2Show) {
+			    //切换到第二个选项卡
+			    //根据具体业务，动态获得第二个选项卡内容；
+			    var state = '1';
+			    
+			    //显示内容
+//			    alert(mpplanList(state,'2017-06-08'));
+			   // document.getElementById("item2").innerHTML = mpplanList(state,pdate);
+			    //改变标志位，下次直接显示
+			    item2Show = true;
+			    
+			    
+			  } else if (event.detail.slideNumber === 2&&!item3Show) {
+			    //切换到第三个选项卡
+			    //根据具体业务，动态获得第三个选项卡内容；
+//			    var content = 'san';
+			    //显示内容
+			    document.getElementById("item3").innerHTML = content;
+			    //改变标志位，下次直接显示
+			    item3Show = true;
+			  }else if (event.detail.slideNumber === 3&&!item4Show) {
+			    //切换到第三个选项卡
+			    //根据具体业务，动态获得第三个选项卡内容；
+//			    var content = 'shi';
+			    //显示内容
+			    document.getElementById("item4").innerHTML = content;
+			    //改变标志位，下次直接显示
+			    
+			    item4Show = true;
+			  }
+			});	
+			
+			document.getElementById('btn').addEventListener('tap',function(){
+				mpplanList('0','2017-6-08');
+			});
+//			mui.plusReady(
+//				function mpplanList(state,pdate){
+//					
+//					// get测试请求地址 http://test.dongyixueyuan.com/link_app/get?state=index&num=0
+//					//http://39.108.7.251/testmssql/production/mpplanByDataState.php?state=0&&pdate=2017-06-08'
+//					mui.get('http://39.108.7.251/testmssql/production/mpplanByDataState.php',{ //请求接口地址
+//						state:state,  // 参数  键 ：值
+//						pdate:pdate
+//						},function(data){ // data为服务器端返回数据
+//						//获得服务器响应 ... 
+//							var str='';
+//							str+='<ul class="mui-table-view">';
+//							for(var i=0;i<data.length;i++){
+//								
+//								
+//								str+='<li class="mui-table-view-cell">';
+//								str+='<a id="mpplanD" class="mui-navigate-rigth">';
+//								str+='<div style="width:70%;float: left">';
+//								str+='<p style="font-style: inherit; font-size: 15px;">'+data[i].PlanID+'</p>';
+//								str+='<p style="font-style: inherit; font-size: 15px;">'+data[i].ProjectName+'</p>';
+//								str+= '<p style="font-style: inherit; font-size: 12px;" class="mui-ellipsis">施工部位：'+data[i].Part+'</p>';
+//								str+= '<p style="font-style: inherit; font-size: 12px;" class="mui-ellipsis">强度：'+data[i].Grade+'</p>';
+//								str+= '<p style="font-style: inherit; font-size: 12px;" class="mui-ellipsis">'+data[i].TSName+'</p>';
+//								
+//								str+='<p style="font-style: inherit; font-size: 12px;" class="mui-ellipsis">计划开盘：'+data[i].PDate.substr(0,16)+'</p>';
+//								str+='</div>';
+//								str+='<div style="width:30%;float: right">';
+//								str+='<p style="font-style: inherit; font-size: 15px;">'+data[i].ExecStat+'</p>';
+//								str+= '<p style="font-style: inherit; font-size: 12px;" class="mui-ellipsis">坍落度：'+data[i].tld+'</p>';
+//								str+='<p style="font-style: inherit; font-size: 12px;" class="mui-ellipsis">计划量：'+Number(data[i].QualityPlan)+'</p>';
+//								str+='<p style="font-style: inherit; font-size: 12px;" class="mui-ellipsis">完成量：'+Number(data[i].QualityGive)+'</p>';
+//								
+//								str+='</div>';
+//								str+='</a>';
+//								str+='</li>';
+//							}
+//						    str+='</ul">';
+//						    console.log(str);
+//						},'json' 
+//					);
+//				}
+//			);
+	</script>
+	</body>
+
+</html>

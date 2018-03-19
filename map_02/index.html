@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+    <style type="text/css">
+    	*{margin:0px; padding:0px; font-size:16px;}
+		#footer{background:#FFFFFF; height:88px; width:78%; padding:12px; position:fixed; z-index:10; left:0px; bottom:0px; line-height:20px;}
+		#goto{width:58px; height:58px; background:url(img/center.png) no-repeat center center #51C332; background-size:80% 80%; position:fixed; z-index:11; right:15px; bottom:15px; border-radius:58px;}
+    </style>
+</head>
+<body>
+	<div id="map">
+		地图加载中……
+	</div>
+	<div id="footer">
+		[当前位置]<br/>
+		<span id="address"></span>
+	</div>
+	<div id="goto"></div>
+</body>
+<script type="text/javascript">
+		var map,center,address;
+		document.addEventListener('plusready',function(){
+			plus.nativeUI.showWaiting();
+			var winheight = document.documentElement.clientHeight;
+			document.getElementById('map').style.height=(winheight-88) + "px";
+			map = new  plus.maps.Map('map');
+			map.setZoom(15);
+			map.showUserLocation(true);
+			map.showZoomControls(true);
+			
+			//获取用户位置
+			map.getUserLocation(function(state,point){
+				center  = new plus.maps.Point(point.longitude,point.latitude);
+				console.log(point.longitude+"--"+point.latitude);
+				//设置中心点
+				map.setCenter(center);
+				
+				//定义单车经纬度
+				var bike1 = new plus.maps.Point(point.longitude,point.latitude);
+				//创建Marker
+				var bikeMark1 = new plus.maps.Marker(bike1);
+				bikeMark1.setIcon("img/bike.png");
+				//定义地图汽泡对象
+				var bubble=new plus.maps.Bubble('我当前所在位置');
+				bikeMark1.setBubble(bubble);
+				map.addOverlay(bikeMark1);
+				
+				//定义单车经纬度
+				var bike2=new plus.maps.Point(point.longitude+0.001,point.latitude+0.002);
+				//创建Marker
+				var bikeMark2= new plus.maps.Marker(bike2);
+				bikeMark2.setIcon("img/bike.png");
+				//定义地图汽泡对象
+				var bubble2=new plus.maps.Bubble('我当前所在位置');
+				bikeMark2.setBubble(bubble2);
+				map.addOverlay(bikeMark2);
+			});
+			
+			//获取用户信息地址
+			plus.geolocation.getCurrentPosition(function(p){
+				plus.nativeUI.closeWaiting();
+				console.log(JSON.stringify(p));
+				address=p.addresses;
+				document.getElementById('address').innerHTML=address;
+			},
+			function(){
+				
+			});
+			
+			document.getElementById("goto").addEventListener('tap',function(){
+				plus.maps.openSysMap(center,address,center);
+			});
+		});
+	</script>	
+</html>

@@ -1,0 +1,88 @@
+{
+	"index.html": {
+		"refer": [
+			"UI/accordion.html",
+			"UI/actionsheet.html",
+			"UI/badge.html",
+			"UI/button.html",
+			"UI/cardview.html",
+			"UI/checkbox.html",
+			"UI/dialog_alert.html",
+			"UI/dialog.html",
+			"UI/gallery.html",
+			"UI/grid.html",
+			"UI/icon.html",
+			"UI/input.html"
+		],
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/mui.js"
+		]
+	},
+	"UI/accordion.html": {
+		"refer": [
+			"index.html"
+		],
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"UI/actionsheet.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/badge.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/button.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/cardview.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/checkbox.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/dialog_alert.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/dialog.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/gallery.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/grid.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/icon.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"UI/input.html": {
+		"refer": [
+			"UI/input.html",
+			"index.html"
+		]
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/update.js"
+		],
+		"refer": [
+			"index-menu.html",
+			"examples/guide.html",
+			"examples/tableviews-with-swipe.html",
+			"examples/tableviews.html",
+			"examples/best-practices/list-to-detail/listview.html",
+			"examples/input.html",
+			"examples/nav.html",
+			"examples/picker.html"
+		]
+	},
+	"examples/tableviews-with-swipe.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"examples/tableviews.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"examples/best-practices/list-to-detail/detail.html": {
+		"resources": [
+			"examples/best-practices/list-to-detail/list-to-detail.css"
+		]
+	},
+	"examples/best-practices/list-to-detail/listview.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"examples/best-practices/list-to-detail/vue.min.js"
+		],
+		"refer": [
+			"examples/best-practices/list-to-detail/detail.html"
+		]
+	}
+}

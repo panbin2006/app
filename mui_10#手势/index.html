@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title">手势</h1>
+	</header>
+	<div class="mui-content">
+	    <ul class="mui-table-view">
+	    	<li class="mui-table-view-cell">单击</li>
+	    	<li class="mui-table-view-cell">双击</li>
+	    	<li class="mui-table-view-cell">长按</li>
+	    	<li class="mui-table-view-cell">按住屏幕</li>
+	    	<li class="mui-table-view-cell">离开</li>
+	    	<li class="mui-table-view-cell">cell</li>
+	    	<li class="mui-table-view-cell">cell</li>
+	    	<li class="mui-table-view-cell">cell</li>
+	    </ul>
+	</div>
+	
+	<script type="text/javascript">
+		mui.init({
+			getstureConfig:{
+				tap: true, //默认为true 
+				doubletap: true, //默认为false 
+				longtap: true, //默认为false 
+				swipe: true, //默认为true 
+				drag: true, //默认为true 
+				hold:false,//默认为false，不监听 
+				release:false//默认为false，不监听 
+			}
+		});
+		
+		var cell = document.getElementsByClassName('mui-table-view-cell');
+		//console.log(cell[0].innerHTML);
+		cell[0].addEventListener('tap',function(){
+			alert('单击了');
+		});
+		
+		cell[1].addEventListener('longtap',function(){
+			alert('双击了');
+		});
+	</script>
+</body>
+</html>
